@@ -61,12 +61,14 @@ header::before {
 .tarantula-icon__container {
     display: flex;
     align-items: center;
+    padding: 0 5px;
+    margin-top: 5px;
 }
 
 .tarantula-icon {
     max-width: 100%;
-    width: calc(var(--index) * 3);
-    height: calc(var(--index) * 3);
+    width: calc(var(--index) * 2.9);
+    height: calc(var(--index) * 2.9);
 }
 
 /* general link style*/
