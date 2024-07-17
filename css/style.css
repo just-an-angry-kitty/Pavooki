@@ -3,12 +3,35 @@ html {
     overflow-x: hidden;
 }
 body {
+    position: relative;
     overflow-x: hidden;
     margin: 0;
     width: 100%;
-    background-color: rgb(95, 95, 95);
     color: rgb(0, 0, 0);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.background-image__container {
+    position: fixed;
+    display: flex;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.nature-background__image {
+    background-image: url(../img/green.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
 }
 
 :root {
@@ -148,17 +171,22 @@ main {
     justify-content: center;
 }
 .main-container {
-    max-width: calc(var(--index) * 40);
-    height: calc(var(--index) * 24);
+    margin: calc(var(--index) * 4) 0;
+    max-width: calc(var(--index) * 35);
+    height: calc(var(--index) *20);
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid gray;
+    border-radius: 20px;
+    box-shadow: -2px 2px 10px black;
+    background-color: rgba(0, 0, 0, 0.299);
 }
 
-.main-img {
+/* .main-img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -166,8 +194,7 @@ main {
     top: 0;
     object-fit: cover;
     z-index: 1;
-    
-}
+} */
 
 .main-text__container {
     padding:  calc(var(--index) * 2) calc(var(--index) * 2);
@@ -221,7 +248,7 @@ main {
 
 .cute-spider-face-pict__container {
     width: auto;
-    height: calc(var(--index) * 2);
+    height: calc(var(--index) * 1);
     position: relative;
     background-color: rgb(3, 35, 3);
 }
@@ -233,7 +260,7 @@ main {
     width: calc(var(--index) * 12);
     height: calc(var(--index) * 8);
     position: absolute;
-    bottom: calc(var(--index) * 2);
+    bottom: calc(var(--index) * 0.9);
     z-index: 3;
 
 }
@@ -252,8 +279,8 @@ main {
 .gallery {
     margin: calc(var(--index) * 2) calc(var(--index) * 6);
     display: grid; 
-    grid-template-columns: calc(var(--index) * 17) calc(var(--index) * 17); 
-    grid-template-rows: calc(var(--index) * 17) calc(var(--index) * 17) calc(var(--index) * 17); 
+    grid-template-columns: calc(var(--index) * 15) calc(var(--index) * 15); 
+    grid-template-rows: calc(var(--index) * 15) calc(var(--index) * 15) calc(var(--index) * 15); 
     gap: calc(var(--index) * 2) calc(var(--index) * 2); 
     grid-template-areas: 
       ". ."
@@ -264,10 +291,9 @@ main {
 }
 
 .gallery-item__container {
-    overflow: hidden;
     display: flex;
-    width: calc(var(--index) * 17);
-    height: calc(var(--index) * 17);
+    width: calc(var(--index) * 15);
+    height: calc(var(--index) * 15);
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
@@ -275,17 +301,19 @@ main {
 }
 
 .gallery__item {
+    border-radius: 30px;
+    border: 1px solid white;
+    box-shadow: 0 0 5px black;
     filter: brightness(80%);
-    width: calc(var(--index) * 17);
-    height: calc(var(--index) * 17);
-    transition: all 0.3s ease-in-out;
+    width: calc(var(--index) * 15);
+    height: calc(var(--index) * 15);
+    transition: filter 0.3s ease-in-out, width  0.3s ease-in-out, height 0.3s ease-in-out;
 }
-
 
 .gallery-item__container:hover .gallery-item__link .gallery__item {
     filter: brightness(100%);
-    width: calc(var(--index) * 16);
-    height: calc(var(--index) * 16);
+    width: calc(var(--index) * 14);
+    height: calc(var(--index) * 14);
 }
 
 .footer-items__container {
@@ -323,7 +351,7 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(91, 91, 91);
+        background-color: rgb(37, 37, 37);
         z-index: 1;
         padding: calc(var(--index) * 6) 0 0 25px;
         transition: left 0.5s, right 0.5s;
@@ -403,16 +431,30 @@ main {
 
     /* Burger menu end */
 
+    .main-container__container {
+        margin: 0 20px;
+    }
+
+    .main-title {
+        margin-bottom: 10px;
+    }
+    
+    .main-text__container {
+        padding: 14px;
+        padding-top: 0;
+        text-align: center;
+    }
+
     .cute-spider-face-pict {
-        margin: 0;
+        margin-left: 5px;
         width: calc(var(--index) * 8);
         height: calc(var(--index) * 6);
     }
 
 
     .gallery {
-        grid-template-columns: calc(var(--index) * 25) ;
-        grid-template-rows: calc(var(--index) * 25) ; 
+        grid-template-columns: calc(var(--index) * 20) ;
+        grid-template-rows: calc(var(--index) * 20) ; 
         gap: calc(var(--index) * 2) calc(var(--index) * 2);
         grid-template-areas: 
         "."
@@ -424,12 +466,12 @@ main {
     }
 
     .gallery-item__container, .gallery__item {
-        width: calc(var(--index) * 25);
-        height: calc(var(--index) * 25);
+        width: calc(var(--index) * 20);
+        height: calc(var(--index) * 20);
     }
 
-    .gallery-item__container:hover .gallery__item {
-        width: calc(var(--index) * 23);
-        height: calc(var(--index) * 23);
+    .gallery-item__container:hover .gallery-item__link .gallery__item {
+        width: calc(var(--index) * 19);
+        height: calc(var(--index) * 19);
     }
 }
