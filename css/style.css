@@ -18,7 +18,7 @@ body {
     display: flex;
     z-index: -2;
     width: 100vw;
-    height: 130%;
+    height: 130vh;
     align-items: flex-start;
     justify-content: center;
 }
@@ -31,7 +31,7 @@ body {
     position: fixed;
     z-index: -1;
     width: 100vw;
-    height: 130%;
+    height: 130vh;
 
 }
 
