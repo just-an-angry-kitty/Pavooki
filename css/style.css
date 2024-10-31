@@ -19,7 +19,7 @@ body {
     z-index: -2;
     width: 100vw;
     overflow: hidden;
-    height: 150vh;
+    height: 100%;
     align-items: flex-start;
     justify-content: center;
 }
@@ -33,7 +33,7 @@ body {
     z-index: -1;
     width: 100vw;
     overflow: hidden;
-    height: 150vh;
+    height: 100%;
 
 }
 
